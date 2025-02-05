@@ -16,12 +16,17 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Board extends BaseEntity {
-    @Column (nullable = false)
-    private String title;
-    @Column (nullable = false)
+public class Comment extends BaseEntity {
+
+    @ManyToOne
+    @JoinColumn(name = "board_no")
+    private Board boardNo;
+    @Column(nullable = false)
     private String contents;
     @ManyToOne
-    @JoinColumn(name = "author_id")
+    @JoinColumn(name = "author")
     private Member author;
+    @ManyToOne
+    @JoinColumn(name = "parent_no")
+    private Comment parentNo;
 }
