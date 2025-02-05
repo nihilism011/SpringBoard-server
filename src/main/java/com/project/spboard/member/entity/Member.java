@@ -29,5 +29,5 @@ public class Member extends BaseEntity {
     private String role = "USER";
 
     @OneToMany
-    private List<Board> boardList;
+    private List<Board> boards;
 }
