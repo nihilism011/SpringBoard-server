@@ -1,0 +1,6 @@
+logging:
+  level:
+    root: WARN
+    org.springframework.web: ERROR
+    org.hibernate.SQL: ERROR
+    org.hibernate.type.descriptor.sql: ERROR

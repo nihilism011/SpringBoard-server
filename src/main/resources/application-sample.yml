@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:./data/dev
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+      open-in-view: true
+  devtools:
+    restart:
+      enabled: true
+client:
+  url: "http://localhost:5173"
+security:
+  jwt:
+    secretKey: #
