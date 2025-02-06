@@ -28,7 +28,7 @@ public class MemberService {
             Member member = Member.builder()
                     .email(joinReqDto.getEmail())
                     .name(joinReqDto.getName())
-                    .password(joinReqDto.getPassword())
+                    .password(passwordEncoder.encode(joinReqDto.getPassword()))
                     .build();
             memberRepository.save(member);
             return ApiResponse.success(null);
@@ -41,7 +41,7 @@ public class MemberService {
         try {
             return memberRepository.findByEmail(loginReqDto.getEmail())
                     .map(member -> {
-                        if(loginReqDto.getPassword().equals(member.getPassword())){
+                        if(passwordEncoder.matches(loginReqDto.getPassword(),member.getPassword())){
                             return ApiResponse.success(member.toLoginResDto());
                         } else{
                             return ApiResponse.<LoginResDto>error("로그인에 실패했습니다.", HttpStatus.BAD_REQUEST);
