@@ -1,0 +1,32 @@
+[1;35m02-06 11:23:01[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 25224 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-06 11:23:01[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 1 profile is active: "local" 
+[1;35m02-06 11:23:15[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.406 seconds (process running for 16.304) 
+[1;35m02-06 13:31:20[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 27524 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-06 13:31:20[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 1 profile is active: "local" 
+[1;35m02-06 13:31:34[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.424 seconds (process running for 16.271) 
+[1;35m02-06 13:32:19[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 22620 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-06 13:32:19[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 1 profile is active: "local" 
+[1;35m02-06 13:32:33[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.58 seconds (process running for 16.403) 
+[1;35m02-06 13:36:54[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 14652 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-06 13:36:54[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 1 profile is active: "local" 
+[1;35m02-06 13:37:09[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.764 seconds (process running for 16.584) 
+[1;35m02-06 13:38:11[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 26224 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-06 13:38:11[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 1 profile is active: "local" 
+[1;35m02-06 13:38:26[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 16.212 seconds (process running for 17.02) 
+[1;35m02-06 13:40:33[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 2588 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-06 13:40:33[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 1 profile is active: "local" 
+[1;35m02-06 13:40:48[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.324 seconds (process running for 16.209) 
+[1;35m02-06 13:42:25[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-06 13:42:25[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=email, password=password, name=name) 
+[1;35m02-06 13:42:25[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@1947c614,[]> 
+[1;35m02-06 13:43:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 25724 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-06 13:43:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 1 profile is active: "local" 
+[1;35m02-06 13:43:16[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.285 seconds (process running for 16.137) 
+[1;35m02-06 13:43:21[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-06 13:43:21[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=email, password=password, name=name) 
+[1;35m02-06 13:43:21[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@4e8fa4ea,[]> 
+[1;35m02-06 13:45:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-06 13:45:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=email, password=password, name=name) 
+[1;35m02-06 13:45:02[0;39m [[1;33mERROR[0;39m] [36mo.h.e.j.s.SqlExceptionHelper.logExceptions[0;39m - Unique index or primary key violation: "PUBLIC.UKMBMCQELTY0FBRVXP1Q58DN57T_INDEX_8 ON PUBLIC.MEMBER(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'email' )"; SQL statement:
+insert into member (created_at,email,modified_at,name,password,role,id) values (?,?,?,?,?,?,?) [23505-232] 
+[1;35m02-06 13:45:03[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<500 INTERNAL_SERVER_ERROR Internal Server Error,com.project.spboard.core.dto.ApiResponse@4e7d3ec7,[]> 

@@ -8,11 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class JoinReqDto {
+public class LoginReqDto {
     @NotBlank
     private String email;
 
     private String password;
-    @NotBlank
-    private String name;
 }
