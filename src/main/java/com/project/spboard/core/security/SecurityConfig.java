@@ -2,6 +2,7 @@ package com.project.spboard.core.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -28,13 +29,16 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-                .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
                                 .requestMatchers("/permit", "/login").permitAll()
                                 .requestMatchers("/deny").denyAll()
                                 .anyRequest().authenticated()
                 )
+                .csrf(AbstractHttpConfigurer::disable)
+                .headers( headers -> headers
+                        .frameOptions(frameOptionsConfig -> frameOptionsConfig
+                                .sameOrigin()))
                 .formLogin(Customizer.withDefaults());
         return http.build();
     }
