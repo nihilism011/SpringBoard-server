@@ -13,14 +13,14 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @Builder
-@Entity
+@Entity(name = "board_comment")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Comment extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "board_no")
-    private Board boardNo;
+    private Board board;
     @Column(nullable = false)
     private String contents;
     @ManyToOne
