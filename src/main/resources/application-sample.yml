@@ -1,0 +1,25 @@
+spring:
+  security:
+    user:
+      name:
+      password:
+      roles:
+  datasource:
+    driver-class-name:
+    url:
+    username:
+    password:
+    platform:
+    initialize:
+  h2:
+    console:
+      enable:
+      path:
+  jpa:
+    hibernate:
+      ddl-auto:
+      show-sql:
+      open-in-view:
+  devtools:
+    restart:
+      enabled:
