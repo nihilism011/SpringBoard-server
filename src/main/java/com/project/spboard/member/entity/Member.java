@@ -34,7 +34,7 @@ public class Member extends BaseEntity {
     @OneToMany
     private List<Board> boards;
 
-    public LoginResDto toLoginResDto(){
-        return new LoginResDto(email, name);
-    }
+//    public LoginResDto toLoginResDto(){
+//        return new LoginResDto(email, name);
+//    }
 }

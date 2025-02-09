@@ -13,4 +13,6 @@ public class LoginResDto {
     private String email;
     @NotBlank
     private String name;
+    @NotBlank
+    private String role;
 }

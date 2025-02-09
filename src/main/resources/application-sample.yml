@@ -4,6 +4,8 @@ spring:
       name:
       password:
       roles:
+  jwt:
+    secret:
   datasource:
     driver-class-name:
     url:
@@ -23,3 +25,5 @@ spring:
   devtools:
     restart:
       enabled:
+client:
+  url:

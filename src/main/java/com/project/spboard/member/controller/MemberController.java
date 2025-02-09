@@ -16,16 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 @RequiredArgsConstructor
 public class MemberController {
-    final private MemberService memberService;
+    private final MemberService memberService;
 
     @PostMapping("/join")
     public ResponseEntity<ApiResponse<String>> join(@RequestBody JoinReqDto joinReqDto) {
         return memberService.saveMember(joinReqDto);
     }
 
-    @PostMapping("/login")
-    public ResponseEntity<ApiResponse<LoginResDto>> login(@RequestBody LoginReqDto loginReqDto){
-        return memberService.login(loginReqDto);
-    }
+//    @PostMapping("/login")
+//    public ResponseEntity<ApiResponse<LoginResDto>> login(@RequestBody LoginReqDto loginReqDto){
+//        return memberService.login(loginReqDto);
+//    }
 
 }
