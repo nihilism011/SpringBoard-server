@@ -16,4 +16,5 @@ client:
   url: "http://localhost:5173"
 security:
   jwt:
-    secretKey: #
+    secretKey: dGhpc0lzSnd0U2VjcmV0S2V5QnlTcHJpbmdCb2FyZFByb2plY3Q=
+    expirationTime: 3600000
