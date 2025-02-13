@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 public class ApiResponse<T> {
     private String status;
     private String message;
-    private T data;
+    private T payload;
 
     public static <T> ResponseEntity<ApiResponse<T>> success(T data) {
         return ResponseEntity.ok(new ApiResponse<T>("success", "요청이 성공했습니다.", data));

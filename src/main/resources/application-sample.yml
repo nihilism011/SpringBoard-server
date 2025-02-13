@@ -1,5 +1,7 @@
 spring:
   security:
+    cookie:
+      secure:
     user:
       name:
       password:
@@ -27,6 +29,6 @@ spring:
       enabled:
 client:
   url:
-cookie:
-  set:
-    secure:
+redis:
+  host:
+  port:

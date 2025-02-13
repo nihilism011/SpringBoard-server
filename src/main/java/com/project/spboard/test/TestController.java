@@ -18,11 +18,6 @@ public class TestController {
         return "deny";
     }
 
-    @GetMapping("/permit")
-    public String permitPage() {
-        return "permit";
-    }
-
     @GetMapping("/checkLogin")
     public ResponseEntity<ApiResponse<String>> checkLogin() {
         return ApiResponse.success(null);

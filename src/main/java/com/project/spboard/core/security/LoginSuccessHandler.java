@@ -1,6 +1,9 @@
 package com.project.spboard.core.security;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.project.spboard.core.dto.ApiResponse;
 import com.project.spboard.core.security.jwt.JwtUtil;
+import com.project.spboard.core.security.jwt.RefreshService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,7 +25,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class LoginSuccessHandler implements AuthenticationSuccessHandler {
     private final JwtUtil jwtUtil;
-    @Value("${cookie.set.secure}")
+    private final RefreshService refreshService;
+    private final ObjectMapper objectMapper;
+    @Value("${spring.security.cookie.secure}")
     private boolean isSecured;
 
     @Override
@@ -37,19 +42,18 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         while (auth.hasNext()) {
             roles.add(auth.next().getAuthority());
         }
-        String accessToken = jwtUtil.createToken(authPrincipal.getUsername(), authPrincipal.getName(), roles, 2);
-        String refreshToken = jwtUtil.createToken(
+        String accessToken = jwtUtil.createAccessToken(authPrincipal.getUsername(), authPrincipal.getName(), roles);
+        String refreshToken = jwtUtil.createRefreshToken(
             authPrincipal.getUsername(),
             authPrincipal.getName(),
-            roles,
-            14 * 60 * 60
+            roles
         );
-
+        refreshService.storeRefreshToken(authPrincipal.getUsername(), refreshToken);
         response.addCookie(createCookie("Authorization", refreshToken));
 
+        String jsonResponse = objectMapper.writeValueAsString(new ApiResponse("success", "요청이 성공했습니다.", accessToken));
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
-        String jsonResponse = String.format("{\"accessToken\":\"%s\",\"message\":\"로그인 성공\"}", accessToken);
         response.getWriter().write(jsonResponse);
 
     }

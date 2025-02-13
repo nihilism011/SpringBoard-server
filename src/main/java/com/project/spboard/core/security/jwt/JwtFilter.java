@@ -1,5 +1,7 @@
 package com.project.spboard.core.security.jwt;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.project.spboard.core.dto.ApiResponse;
 import com.project.spboard.core.security.CustomUserDetails;
 import com.project.spboard.member.dto.LoginResDto;
 import jakarta.servlet.FilterChain;
@@ -20,11 +22,15 @@ import java.io.IOException;
 public class JwtFilter extends OncePerRequestFilter {
 
     private final JwtUtil jwtUtil;
-//    @Override
-//    protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
-//        String path = request.getRequestURI();
-//        return path.startsWith("/login");
-//    }
+    private final ObjectMapper objectMapper;
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
+        String path = request.getRequestURI();
+        return path.startsWith("/login") ||
+            path.startsWith("/join") ||
+            path.startsWith("/refresh");
+    }
 
     @Override
     protected void doFilterInternal(
@@ -44,11 +50,12 @@ public class JwtFilter extends OncePerRequestFilter {
             System.out.println("accessToken is expired");
             SecurityContextHolder.clearContext();
 
+            String jsonResponse = objectMapper.writeValueAsString(new ApiResponse("error",
+                                                                                  "Access token is expired",
+                                                                                  null));
             response.setStatus(401);
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
-
-            String jsonResponse = "{\"status\":\"401err\",\"message\":\"Access token is expired\"}";
             response.getWriter().write(jsonResponse);
 
             return;

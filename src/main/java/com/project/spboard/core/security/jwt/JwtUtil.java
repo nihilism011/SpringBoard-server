@@ -18,7 +18,7 @@ import java.util.List;
 @Component
 public class JwtUtil {
 
-    LocalDateTime now = LocalDateTime.now();
+
     @Value("${spring.jwt.secret}")
     private String secret;
     private SecretKey secretKey;
@@ -61,6 +61,7 @@ public class JwtUtil {
     }
 
     boolean isExpired(String token) {
+        LocalDateTime now = LocalDateTime.now();
         try {
             return jwtClaims(token)
                 .getExpiration()
@@ -70,7 +71,17 @@ public class JwtUtil {
         }
     }
 
-    public String createToken(String email, String name, List<String> roles, long expiredMinute) {
+    public String createAccessToken(String email, String name, List<String> roles) {
+        return createToken(email, name, roles, 2);
+    }
+
+    public String createRefreshToken(String email, String name, List<String> roles) {
+        return createToken(email, name, roles, 14 * 60 * 60);
+    }
+
+
+    private String createToken(String email, String name, List<String> roles, long expiredMinute) {
+        LocalDateTime now = LocalDateTime.now();
         return Jwts.builder()
             .claim("email", email)
             .claim("name", name)
