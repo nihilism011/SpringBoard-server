@@ -10,8 +10,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableAspectJAutoProxy
 public class SpboardApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpboardApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpboardApplication.class, args);
+    }
 
 }

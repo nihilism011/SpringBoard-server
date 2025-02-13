@@ -15,29 +15,29 @@ import java.lang.reflect.Method;
 @Slf4j
 public class LoggingAspect {
 
-    @Pointcut("execution(* com.project.spboard.**.controller..*(..))")
-    private void cut() {
-    }
-
     private static final String CYAN = "\u001B[36m";
     private static final String BOLD_GREEN = "\u001B[1;32m";
     private static final String WHITE = "\u001B[97m";
     private static final String BOLD_LIGHT_BLUE = "\u001B[1;94m";
     private static final String BOLD_LIGHT_YELLOW = "\u001B[1;93m";
 
-    @Around ("cut()")
+    @Pointcut("execution(* com.project.spboard.**.controller..*(..))")
+    private void cut() {
+    }
+
+    @Around("cut()")
     public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
         Method method = getMethod(joinPoint);
-        log.info( WHITE + "method name = "+BOLD_GREEN+"{}"+WHITE+"."+BOLD_LIGHT_BLUE+"{}",method.getDeclaringClass().getSimpleName(),method.getName());
+        log.info(WHITE + "method name = " + BOLD_GREEN + "{}" + WHITE + "." + BOLD_LIGHT_BLUE + "{}", method.getDeclaringClass().getSimpleName(), method.getName());
 
         Object[] args = joinPoint.getArgs();
-        if (args.length ==0) log.info("no parameter");
-        for(Object arg:args){
-            log.info(WHITE +"parameter type = "+BOLD_LIGHT_YELLOW+"{} "+WHITE+"value = "+BOLD_LIGHT_BLUE+"{}",arg.getClass().getSimpleName(),arg);
+        if (args.length == 0) log.info("no parameter");
+        for (Object arg : args) {
+            log.info(WHITE + "parameter type = " + BOLD_LIGHT_YELLOW + "{} " + WHITE + "value = " + BOLD_LIGHT_BLUE + "{}", arg.getClass().getSimpleName(), arg);
         }
         Object returnObj = joinPoint.proceed();
 
-        log.info(WHITE +"return type = "+BOLD_LIGHT_YELLOW+"{} "+WHITE+"value = "+BOLD_LIGHT_BLUE+"{}", returnObj.getClass().getSimpleName(),returnObj);
+        log.info(WHITE + "return type = " + BOLD_LIGHT_YELLOW + "{} " + WHITE + "value = " + BOLD_LIGHT_BLUE + "{}", returnObj.getClass().getSimpleName(), returnObj);
 
         return returnObj;
     }

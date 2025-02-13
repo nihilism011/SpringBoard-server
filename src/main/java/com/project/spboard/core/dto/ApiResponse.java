@@ -14,13 +14,15 @@ public class ApiResponse<T> {
     private String message;
     private T data;
 
-    public static <T> ResponseEntity<ApiResponse<T>> success (T data){
+    public static <T> ResponseEntity<ApiResponse<T>> success(T data) {
         return ResponseEntity.ok(new ApiResponse<T>("success", "요청이 성공했습니다.", data));
     }
-    public static <T> ResponseEntity<ApiResponse<T>> success (String message, T data){
+
+    public static <T> ResponseEntity<ApiResponse<T>> success(String message, T data) {
         return ResponseEntity.ok(new ApiResponse<T>("success", message, data));
     }
-    public static <T> ResponseEntity<ApiResponse<T>> error (String message, HttpStatus status){
+
+    public static <T> ResponseEntity<ApiResponse<T>> error(String message, HttpStatus status) {
         return ResponseEntity.status(status).body(new ApiResponse<T>("error", message, null));
     }
 }

@@ -2,9 +2,7 @@ package com.project.spboard.core.security;
 
 import com.project.spboard.member.entity.Member;
 import com.project.spboard.member.repository.MemberRepository;
-import com.project.spboard.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -19,8 +17,9 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Member member = memberRepository
-                .findByEmail(username)
-                .orElseThrow(() -> new UsernameNotFoundException("Member not found"));
-        return new CustomUserDetails(member);
+            .findByEmail(username)
+            .orElseThrow(() -> new UsernameNotFoundException("Member not found"));
+
+        return new CustomUserDetails(member.toLoginResDto());
     }
 }

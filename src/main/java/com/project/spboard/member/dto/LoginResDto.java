@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,6 +15,7 @@ public class LoginResDto {
     private String email;
     @NotBlank
     private String name;
+    private String password;
     @NotBlank
-    private String role;
+    private List<String> roles;
 }

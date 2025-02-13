@@ -2,19 +2,13 @@ package com.project.spboard.member.service;
 
 import com.project.spboard.core.dto.ApiResponse;
 import com.project.spboard.member.dto.JoinReqDto;
-import com.project.spboard.member.dto.LoginReqDto;
-import com.project.spboard.member.dto.LoginResDto;
 import com.project.spboard.member.entity.Member;
 import com.project.spboard.member.repository.MemberRepository;
-import jdk.jfr.StackTrace;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import javax.sound.midi.Track;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -23,7 +17,7 @@ public class MemberService {
     private final MemberRepository memberRepository;
     private final BCryptPasswordEncoder passwordEncoder;
 
-    public ResponseEntity<ApiResponse<String>> saveMember(JoinReqDto joinReqDto){
+    public ResponseEntity<ApiResponse<String>> saveMember(JoinReqDto joinReqDto) {
         try {
             Member member = Member.builder()
                     .email(joinReqDto.getEmail())
@@ -32,7 +26,7 @@ public class MemberService {
                     .build();
             memberRepository.save(member);
             return ApiResponse.success(null);
-        } catch(Exception e) {
+        } catch (Exception e) {
             return ApiResponse.error("회원가입 요청이 실패했습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

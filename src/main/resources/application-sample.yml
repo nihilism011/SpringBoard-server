@@ -27,3 +27,6 @@ spring:
       enabled:
 client:
   url:
+cookie:
+  set:
+    secure:

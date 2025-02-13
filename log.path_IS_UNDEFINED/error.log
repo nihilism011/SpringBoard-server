@@ -1,157 +1,307 @@
-[1;35m02-09 15:12:09[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 25216 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:12:09[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:12:18[0;39m [[1;33mERROR[0;39m] [36mo.s.b.SpringApplication.reportFailure[0;39m - Application run failed 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'securityConfig': Injection of autowired dependencies failed
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.project.spboard.SpboardApplication.main(SpboardApplication.java:14)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'client.url' in value "${client.url}"
-	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
-	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:416)
-	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128)
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118)
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255)
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226)
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:963)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1541)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	... 24 common frames omitted
-[1;35m02-09 15:13:16[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 31804 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:13:16[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:13:25[0;39m [[1;33mERROR[0;39m] [36mo.s.b.SpringApplication.reportFailure[0;39m - Application run failed 
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtil' defined in file [C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main\com\project\spboard\core\security\jwt\JwtUtil.class]: Failed to instantiate [com.project.spboard.core.security.jwt.JwtUtil]: Constructor threw exception
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1343)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1228)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.project.spboard.SpboardApplication.main(SpboardApplication.java:14)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.project.spboard.core.security.jwt.JwtUtil]: Constructor threw exception
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
-	... 24 common frames omitted
-Caused by: java.lang.NullPointerException: Cannot invoke "String.getBytes()" because "this.secret" is null
-	at com.project.spboard.core.security.jwt.JwtUtil.<init>(JwtUtil.java:22)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:196)
-	... 26 common frames omitted
-[1;35m02-09 15:19:59[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 11356 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:19:59[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:20:13[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.228 seconds (process running for 16.062) 
-[1;35m02-09 15:20:24[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
-[1;35m02-09 15:20:24[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=email, password=password, name=name) 
-[1;35m02-09 15:20:24[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@7610090b,[]> 
-[1;35m02-09 15:22:33[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 8380 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:22:33[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:23:43[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 26444 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:23:43[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:23:59[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 17.57 seconds (process running for 18.424) 
-[1;35m02-09 15:24:07[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
-[1;35m02-09 15:24:07[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=email, password=password, name=name) 
-[1;35m02-09 15:24:07[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@36ad68f2,[]> 
-[1;35m02-09 15:30:27[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 30684 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:30:27[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:30:36[0;39m [[1;33mERROR[0;39m] [36mo.s.b.d.LoggingFailureAnalysisReporter.report[0;39m - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.project.spboard.core.config.SecurityConfig required a bean of type 'com.project.spboard.core.security.CustomUserDetailsService' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.project.spboard.core.security.CustomUserDetailsService' in your configuration.
- 
-[1;35m02-09 15:33:59[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 28616 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:33:59[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:34:08[0;39m [[1;33mERROR[0;39m] [36mo.s.b.d.LoggingFailureAnalysisReporter.report[0;39m - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.project.spboard.core.config.SecurityConfig required a bean of type 'com.project.spboard.core.security.CustomUserDetailsService' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.project.spboard.core.security.CustomUserDetailsService' in your configuration.
- 
-[1;35m02-09 15:34:36[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 34028 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:34:36[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:34:50[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.337 seconds (process running for 16.167) 
-[1;35m02-09 15:35:05[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
-[1;35m02-09 15:35:05[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=email, password=password, name=name) 
-[1;35m02-09 15:35:06[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@47323d57,[]> 
-[1;35m02-09 15:38:24[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 20780 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:38:24[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:38:38[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 14.882 seconds (process running for 15.698) 
-[1;35m02-09 15:38:39[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
-[1;35m02-09 15:38:39[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=email, password=password, name=name) 
-[1;35m02-09 15:38:39[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@11db6be6,[]> 
-[1;35m02-09 15:51:49[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 33116 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:51:49[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
-[1;35m02-09 15:52:03[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.581 seconds (process running for 16.424) 
-[1;35m02-09 15:52:07[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
-[1;35m02-09 15:52:07[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=email, password=password, name=name) 
-[1;35m02-09 15:52:07[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@16bf8102,[]> 
-[1;35m02-09 15:54:41[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 28920 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
-[1;35m02-09 15:54:41[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 03:31:52[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 8860 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 03:31:52[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 03:32:07[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 16.28 seconds (process running for 17.167) 
+[1;35m02-13 03:32:31[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 03:32:31[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=name) 
+[1;35m02-13 03:32:31[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@77314e20,[]> 
+[1;35m02-13 03:36:24[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 29148 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 03:36:24[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 03:36:38[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.715 seconds (process running for 16.557) 
+[1;35m02-13 04:54:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 29552 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 04:54:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 04:54:17[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.863 seconds (process running for 16.691) 
+[1;35m02-13 04:54:29[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 04:54:29[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=name) 
+[1;35m02-13 04:54:29[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@54f8f2c2,[]> 
+[1;35m02-13 05:09:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 13332 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 05:09:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 05:09:16[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.74 seconds (process running for 16.613) 
+[1;35m02-13 05:11:58[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 05:11:58[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=name) 
+[1;35m02-13 05:11:58[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@24e4f56b,[]> 
+[1;35m02-13 05:16:27[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 31424 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 05:16:27[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 05:16:42[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.752 seconds (process running for 16.609) 
+[1;35m02-13 05:16:49[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 05:16:49[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=name) 
+[1;35m02-13 05:16:49[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@48106c3a,[]> 
+[1;35m02-13 05:19:20[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 27244 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 05:19:20[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 05:19:35[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 16.055 seconds (process running for 16.885) 
+[1;35m02-13 05:28:52[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 05:28:52[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 05:28:52[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@369fa3eb,[]> 
+[1;35m02-13 05:31:19[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 05:31:19[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 05:31:19[0;39m [[1;33mWARN [0;39m] [36mo.h.e.j.s.SqlExceptionHelper.logExceptions[0;39m - SQL Error: 23505, SQLState: 23505 
+[1;35m02-13 05:31:19[0;39m [[1;33mERROR[0;39m] [36mo.h.e.j.s.SqlExceptionHelper.logExceptions[0;39m - Unique index or primary key violation: "PUBLIC.UKMBMCQELTY0FBRVXP1Q58DN57T_INDEX_8 ON PUBLIC.MEMBER(EMAIL NULLS FIRST) VALUES ( /* 1 */ '1' )"; SQL statement:
+insert into member (created_at,email,modified_at,name,password,roles,id) values (?,?,?,?,?,?,?) [23505-232] 
+[1;35m02-13 05:31:19[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<500 INTERNAL_SERVER_ERROR Internal Server Error,com.project.spboard.core.dto.ApiResponse@23712db4,[]> 
+[1;35m02-13 05:33:47[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 25152 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 05:33:47[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 05:34:01[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.826 seconds (process running for 16.713) 
+[1;35m02-13 05:34:03[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 05:34:03[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 05:34:03[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@3888aa2,[]> 
+[1;35m02-13 05:37:44[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 29164 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 05:37:44[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 05:37:59[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 16.588 seconds (process running for 17.43) 
+[1;35m02-13 05:38:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 05:38:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 05:38:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@14b51282,[]> 
+[1;35m02-13 05:39:01[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 31508 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 05:39:01[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 05:39:20[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 20.457 seconds (process running for 21.519) 
+[1;35m02-13 05:39:48[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 05:39:48[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 05:39:51[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@2adf9ed8,[]> 
+[1;35m02-13 05:43:30[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 24144 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 05:43:30[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 05:43:45[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.747 seconds (process running for 16.634) 
+[1;35m02-13 05:43:57[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 05:43:57[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 05:43:58[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@54ab273a,[]> 
+[1;35m02-13 05:56:46[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 24828 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 05:56:46[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 05:57:00[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.781 seconds (process running for 16.663) 
+[1;35m02-13 05:57:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 05:57:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 05:57:03[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@b1ce234,[]> 
+[1;35m02-13 05:57:09[0;39m [[1;33mERROR[0;39m] [36mo.a.c.c.C.[.[.[.[dispatcherServlet].log[0;39m - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception 
+java.lang.NullPointerException: Cannot invoke "java.util.Date.before(java.util.Date)" because the return value of "io.jsonwebtoken.Claims.getExpiration()" is null
+	at com.project.spboard.core.security.jwt.JwtUtil.isExpired(JwtUtil.java:69)
+	at com.project.spboard.core.security.jwt.JwtFilter.doFilterInternal(JwtFilter.java:48)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[1;35m02-13 05:57:52[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 28580 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 05:57:52[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 05:58:06[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.934 seconds (process running for 16.789) 
+[1;35m02-13 05:58:09[0;39m [[1;33mERROR[0;39m] [36mo.a.c.c.C.[.[.[.[dispatcherServlet].log[0;39m - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception 
+java.lang.NullPointerException: Cannot invoke "java.util.Date.before(java.util.Date)" because the return value of "io.jsonwebtoken.Claims.getExpiration()" is null
+	at com.project.spboard.core.security.jwt.JwtUtil.isExpired(JwtUtil.java:69)
+	at com.project.spboard.core.security.jwt.JwtFilter.doFilterInternal(JwtFilter.java:48)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[1;35m02-13 05:59:13[0;39m [[1;33mERROR[0;39m] [36mo.a.c.c.C.[.[.[.[dispatcherServlet].log[0;39m - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception 
+java.lang.NullPointerException: Cannot invoke "java.util.Date.before(java.util.Date)" because the return value of "io.jsonwebtoken.Claims.getExpiration()" is null
+	at com.project.spboard.core.security.jwt.JwtUtil.isExpired(JwtUtil.java:69)
+	at com.project.spboard.core.security.jwt.JwtFilter.doFilterInternal(JwtFilter.java:48)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[1;35m02-13 06:01:13[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 06:01:13[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 06:01:13[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@14785e5b,[]> 
+[1;35m02-13 06:03:15[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 28780 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 06:03:15[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 06:03:29[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.975 seconds (process running for 16.806) 
+[1;35m02-13 06:03:41[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 29896 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 06:03:41[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 06:04:01[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 21.194 seconds (process running for 22.09) 
+[1;35m02-13 06:04:06[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 06:04:06[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 06:04:06[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@1206a645,[]> 
+[1;35m02-13 06:04:35[0;39m [[1;33mWARN [0;39m] [36mc.z.h.p.HikariPool.run[0;39m - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s247ms231µs600ns). 
+[1;35m02-13 06:06:53[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 31412 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 06:06:53[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 06:07:08[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.701 seconds (process running for 16.535) 
+[1;35m02-13 06:07:11[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 06:07:11[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 06:07:12[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@69a52226,[]> 
+[1;35m02-13 06:07:54[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 1556 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 06:07:54[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 06:08:08[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.636 seconds (process running for 16.485) 
+[1;35m02-13 06:08:10[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 06:08:10[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 06:08:10[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@6889d474,[]> 
+[1;35m02-13 12:05:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 12:05:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 12:05:02[0;39m [[1;33mWARN [0;39m] [36mo.h.e.j.s.SqlExceptionHelper.logExceptions[0;39m - SQL Error: 23505, SQLState: 23505 
+[1;35m02-13 12:05:02[0;39m [[1;33mERROR[0;39m] [36mo.h.e.j.s.SqlExceptionHelper.logExceptions[0;39m - Unique index or primary key violation: "PUBLIC.UKMBMCQELTY0FBRVXP1Q58DN57T_INDEX_8 ON PUBLIC.MEMBER(EMAIL NULLS FIRST) VALUES ( /* 1 */ '1' )"; SQL statement:
+insert into member (created_at,email,modified_at,name,password,roles,id) values (?,?,?,?,?,?,?) [23505-232] 
+[1;35m02-13 12:05:02[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<500 INTERNAL_SERVER_ERROR Internal Server Error,com.project.spboard.core.dto.ApiResponse@5523817d,[]> 
+[1;35m02-13 12:10:41[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 32088 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 12:10:41[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 12:10:56[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 15.867 seconds (process running for 16.707) 
+[1;35m02-13 12:14:00[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 12:14:00[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 12:14:00[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@5b046afe,[]> 
+[1;35m02-13 12:17:45[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarting[0;39m - Starting SpboardApplication using Java 17.0.12 with PID 16404 (C:\Users\ysha0\git\SpringBoard-server\build\classes\java\main started by ysha0 in C:\Users\ysha0\git\SpringBoard-server) 
+[1;35m02-13 12:17:45[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStartupProfileInfo[0;39m - The following 2 profiles are active: "common", "dev" 
+[1;35m02-13 12:18:00[0;39m [[1;33mINFO [0;39m] [36mc.p.s.SpboardApplication.logStarted[0;39m - Started SpboardApplication in 16.073 seconds (process running for 16.946) 
+[1;35m02-13 12:18:18[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mmethod name = [1;32mMemberController[97m.[1;94mjoin 
+[1;35m02-13 12:18:18[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mparameter type = [1;93mJoinReqDto [97mvalue = [1;94mJoinReqDto(email=1, password=1, name=1) 
+[1;35m02-13 12:18:18[0;39m [[1;33mINFO [0;39m] [36mc.p.s.c.l.LoggingAspect.logAround[0;39m - [97mreturn type = [1;93mResponseEntity [97mvalue = [1;94m<200 OK OK,com.project.spboard.core.dto.ApiResponse@17b2e58a,[]> 
