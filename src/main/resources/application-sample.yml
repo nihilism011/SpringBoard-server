@@ -1,9 +1,20 @@
 spring:
+  security:
+    cookie:
+      secure: false  # 개발 환경에서는 HTTP 사용 가능
+  jwt:
+    secret: ${JWT_SECRET_KEY}  # JWT 비밀 키 환경변수로 설정
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:./data/dev
+    url: jdbc:h2:mem:testdb
     username: sa
-    password:
+    password: ${DB_PASSWORD}  # DB 비밀번호 환경변수로 설정
+    platform: h2
+    initialize: true  # 개발 환경만 사용 - DB 자동 초기화
+  h2:
+    console:
+      enable: true
+      path: /h2-console
   jpa:
     hibernate:
       ddl-auto: update
@@ -13,8 +24,7 @@ spring:
     restart:
       enabled: true
 client:
-  url: "http://localhost:5173"
-security:
-  jwt:
-    secretKey: dGhpc0lzSnd0U2VjcmV0S2V5QnlTcHJpbmdCb2FyZFByb2plY3Q=
-    expirationTime: 3600000
+  url: http://localhost:5173
+redis:
+  host: localhost
+  port: 6379
