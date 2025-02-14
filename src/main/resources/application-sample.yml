@@ -1,34 +1,20 @@
 spring:
-  security:
-    cookie:
-      secure:
-    user:
-      name:
-      password:
-      roles:
-  jwt:
-    secret:
   datasource:
-    driver-class-name:
-    url:
-    username:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:./data/dev
+    username: sa
     password:
-    platform:
-    initialize:
-  h2:
-    console:
-      enable:
-      path:
   jpa:
     hibernate:
-      ddl-auto:
-      show-sql:
-      open-in-view:
+      ddl-auto: update
+      show-sql: false
+      open-in-view: true
   devtools:
     restart:
-      enabled:
+      enabled: true
 client:
-  url:
-redis:
-  host:
-  port:
+  url: "http://localhost:5173"
+security:
+  jwt:
+    secretKey: dGhpc0lzSnd0U2VjcmV0S2V5QnlTcHJpbmdCb2FyZFByb2plY3Q=
+    expirationTime: 3600000

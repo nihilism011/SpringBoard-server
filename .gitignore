@@ -9,6 +9,8 @@ build/
 !/src/main/resources/application-common.yml
 !/src/main/resources/application-sample.yml
 
+/data/
+
 ### STS ###
 .apt_generated
 .classpath
