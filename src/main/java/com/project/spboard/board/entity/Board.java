@@ -16,9 +16,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Board extends BaseEntity {
-    @Column (nullable = false)
+    @Column(nullable = false)
     private String title;
-    @Column (nullable = false)
+    @Column(nullable = false)
     private String contents;
     @ManyToOne
     @JoinColumn(name = "author_id")

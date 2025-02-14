@@ -1,22 +1,27 @@
 package com.project.spboard.test;
 
+
+import com.project.spboard.core.dto.ApiResponse;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
 
     @GetMapping("/auth")
-    public String testPage(){
+
+    public String testPage() {
         return "authenticated";
     }
+
     @GetMapping("/deny")
-    public String denyPage(){
+    public String denyPage() {
         return "deny";
     }
-    @GetMapping("/permit")
-    public String permitPage(){
-        return "permit";
+
+    @GetMapping("/checkLogin")
+    public ResponseEntity<ApiResponse<String>> checkLogin() {
+        return ApiResponse.success(null);
     }
 }

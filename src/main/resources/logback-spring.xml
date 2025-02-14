@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
-    <property name="LOG_PATH" value="F:/logs/SpringBoard"/>
+    <property name="LOG_PATH" value="${log.path}/SpringBoard"/>
     <property name="LOG_FILE_NAME" value="logging"/>
     <property name="ERR_LOG_FILE_NAME" value="err_logging"/>
     <property name="LOG_PATTERN" value="%-5level %d{yy-MM-dd HH:mm:ss}[%thread] [%logger{0}:%line] - %msg%n"/>
@@ -15,9 +15,9 @@
         </encoder>
     </appender>
     <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>D:/logs/error.log</file>
+        <file>${log.path}/error.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>D:/logs/backup/error%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <fileNamePattern>${log.path}/backup/error%d{yyyy-MM-dd}.log.zip</fileNamePattern>
             <maxHistory>90</maxHistory>
         </rollingPolicy>
         <encoder>
