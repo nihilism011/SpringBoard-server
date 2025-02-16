@@ -38,17 +38,17 @@ public class JwtUtil {
             .getPayload();
     }
 
-    String getEmail(String token) {
+    public String getEmail(String token) {
         return jwtClaims(token)
             .get("email", String.class);
     }
 
-    String getName(String token) {
+    public String getName(String token) {
         return jwtClaims(token)
             .get("name", String.class);
     }
 
-    List<String> getRoles(String token) {
+    public List<String> getRoles(String token) {
         Claims claims = jwtClaims(token);
         List<?> roles = claims.get("roles", List.class);
 
@@ -60,7 +60,7 @@ public class JwtUtil {
             .toList();
     }
 
-    boolean isExpired(String token) {
+    public boolean isExpired(String token) {
         LocalDateTime now = LocalDateTime.now();
         try {
             return jwtClaims(token)

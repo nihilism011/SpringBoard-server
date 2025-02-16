@@ -50,9 +50,11 @@ public class JwtFilter extends OncePerRequestFilter {
             System.out.println("accessToken is expired");
             SecurityContextHolder.clearContext();
 
-            String jsonResponse = objectMapper.writeValueAsString(new ApiResponse("error",
-                                                                                  "Access token is expired",
-                                                                                  null));
+            String jsonResponse = objectMapper.writeValueAsString(new ApiResponse(
+                "error",
+                "Access token is expired",
+                null
+            ));
             response.setStatus(401);
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
