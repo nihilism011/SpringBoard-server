@@ -18,6 +18,7 @@ public class RefreshService {
 
     private final RedisTemplate<String, Object> redisTemplate;
     private final JwtUtil jwtUtil;
+    private final String refreshTokenPrefix = "refresh: ";
 
     public ResponseEntity<ApiResponse<String>> validateRefreshToken(HttpServletRequest request) {
         String tokenFromCookie = getRefreshTokenFromCookie(request);
@@ -34,20 +35,28 @@ public class RefreshService {
             );
             return ApiResponse.success(newAccessToken);
         }
-
-
     }
 
     public void storeRefreshToken(String email, String token) {
-        redisTemplate.opsForValue().set("refresh: " + email, token, Duration.ofDays(14));
+        redisTemplate.opsForValue().set(getRefreshKey(email), token, Duration.ofDays(14));
+    }
+
+    public void deleteRefreshForLogout(HttpServletRequest request) {
+        String token = getRefreshTokenFromCookie(request);
+        deleteRefreshToken(jwtUtil.getEmail(token));
+
+    }
+
+    private String getRefreshKey(String email) {
+        return refreshTokenPrefix + email;
     }
 
     private void deleteRefreshToken(String email) {
-        redisTemplate.delete("refresh: " + email);
+        redisTemplate.delete(getRefreshKey(email));
     }
 
     private String findRefreshToken(String email) {
-        Object token = redisTemplate.opsForValue().get("refresh: " + email);
+        Object token = redisTemplate.opsForValue().get(getRefreshKey(email));
         return (token != null) ? token.toString() : null;
     }
 

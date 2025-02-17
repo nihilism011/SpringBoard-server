@@ -1,5 +1,6 @@
 package com.project.spboard.core.config;
 
+import com.project.spboard.core.security.CustomLogoutHandler;
 import com.project.spboard.core.security.CustomUserDetailsService;
 import com.project.spboard.core.security.LoginSuccessHandler;
 import com.project.spboard.core.security.jwt.JwtFilter;
@@ -13,6 +14,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -26,6 +28,7 @@ public class SecurityConfig {
 
     private final CustomUserDetailsService customUserDetailsService;
     private final LoginSuccessHandler loginSuccessHandler;
+    private final CustomLogoutHandler customLogoutHandler;
     private final JwtFilter jwtFilter;
     @Value("${client.url}")
     private String clientUrl;
@@ -56,14 +59,16 @@ public class SecurityConfig {
             .headers(headers -> headers
                 .frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin))
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
-            .formLogin(
-//                        Customizer.withDefaults()
-                form -> form
-                    .loginPage(clientUrl + "/login")
-                    .loginProcessingUrl("/login")
-                    .successHandler(loginSuccessHandler)
-                    .permitAll()
-            );
+            .formLogin(form -> form
+                .loginPage(clientUrl + "/login")
+                .loginProcessingUrl("/login")
+                .successHandler(loginSuccessHandler)
+                .permitAll()
+            )
+            .logout(logout -> logout
+                .logoutUrl("/logout")
+                .addLogoutHandler(customLogoutHandler)
+                .logoutSuccessHandler(((request, response, authentication) -> SecurityContextHolder.clearContext())));
         return http.build();
     }
 
