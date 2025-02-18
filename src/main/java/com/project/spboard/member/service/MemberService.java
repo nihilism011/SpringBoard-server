@@ -9,6 +9,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import java.net.URI;
 
 @Service
 @RequiredArgsConstructor
@@ -20,12 +23,19 @@ public class MemberService {
     public ResponseEntity<ApiResponse<String>> saveMember(JoinReqDto joinReqDto) {
         try {
             Member member = Member.builder()
-                    .email(joinReqDto.getEmail())
-                    .name(joinReqDto.getName())
-                    .password(passwordEncoder.encode(joinReqDto.getPassword()))
-                    .build();
+                .email(joinReqDto.getEmail())
+                .name(joinReqDto.getName())
+                .password(passwordEncoder.encode(joinReqDto.getPassword()))
+                .build();
             memberRepository.save(member);
-            return ApiResponse.success(null);
+            //TODO location 추가 예정 : /member/[id]를 통해 유저 정보 확인
+            URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(member.getId())
+                .toUri();
+
+            return ApiResponse.created(location, null);
         } catch (Exception e) {
             return ApiResponse.error("회원가입 요청이 실패했습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
         }
