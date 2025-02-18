@@ -45,7 +45,7 @@ public class JwtFilter extends OncePerRequestFilter {
             return;
         }
 
-//        토큰 만료 검사
+        //        토큰 만료 검사
         if (jwtUtil.isExpired(accessToken)) {
             System.out.println("accessToken is expired");
             SecurityContextHolder.clearContext();

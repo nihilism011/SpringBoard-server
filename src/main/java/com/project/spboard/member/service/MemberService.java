@@ -20,10 +20,10 @@ public class MemberService {
     public ResponseEntity<ApiResponse<String>> saveMember(JoinReqDto joinReqDto) {
         try {
             Member member = Member.builder()
-                    .email(joinReqDto.getEmail())
-                    .name(joinReqDto.getName())
-                    .password(passwordEncoder.encode(joinReqDto.getPassword()))
-                    .build();
+                .email(joinReqDto.getEmail())
+                .name(joinReqDto.getName())
+                .password(passwordEncoder.encode(joinReqDto.getPassword()))
+                .build();
             memberRepository.save(member);
             return ApiResponse.success(null);
         } catch (Exception e) {
@@ -31,21 +31,21 @@ public class MemberService {
         }
     }
 
-//    public ResponseEntity<ApiResponse<LoginResDto>> login(LoginReqDto loginReqDto){
-//        try {
-//            return memberRepository.findByEmail(loginReqDto.getEmail())
-//                    .map(member -> {
-//                        if(passwordEncoder.matches(loginReqDto.getPassword(),member.getPassword())){
-//                            return ApiResponse.success(member.toLoginResDto());
-//                        } else{
-//                            return ApiResponse.<LoginResDto>error("로그인에 실패했습니다.", HttpStatus.BAD_REQUEST);
-//                        }
-//                    })
-//                    .orElseThrow();
-//        } catch(Exception e) {
-//            System.out.println(e);
-//            return ApiResponse.error("로그인에 실패했습니다.", HttpStatus.BAD_REQUEST);
-//        }
-//    }
+    //    public ResponseEntity<ApiResponse<LoginResDto>> login(LoginReqDto loginReqDto){
+    //        try {
+    //            return memberRepository.findByEmail(loginReqDto.getEmail())
+    //                    .map(member -> {
+    //                        if(passwordEncoder.matches(loginReqDto.getPassword(),member.getPassword())){
+    //                            return ApiResponse.success(member.toLoginResDto());
+    //                        } else{
+    //                            return ApiResponse.<LoginResDto>error("로그인에 실패했습니다.", HttpStatus.BAD_REQUEST);
+    //                        }
+    //                    })
+    //                    .orElseThrow();
+    //        } catch(Exception e) {
+    //            System.out.println(e);
+    //            return ApiResponse.error("로그인에 실패했습니다.", HttpStatus.BAD_REQUEST);
+    //        }
+    //    }
 
 }

@@ -20,13 +20,13 @@ import java.util.List;
 @AllArgsConstructor
 public class Member extends BaseEntity {
 
-    @Column(nullable = false, unique = true)
+    @Column (nullable = false, unique = true)
     private String email;
-    @Column(nullable = true)
+    @Column (nullable = true)
     private String password;
-    @Column(nullable = false, unique = true)
+    @Column (nullable = false, unique = true)
     private String name;
-    @Column(nullable = false)
+    @Column (nullable = false)
     @Builder.Default
     private List<String> roles = List.of("USER");
 

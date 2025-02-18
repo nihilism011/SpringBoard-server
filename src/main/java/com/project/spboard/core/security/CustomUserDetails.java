@@ -19,9 +19,9 @@ public class CustomUserDetails implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
         return loginResDto.getRoles()
-                .stream().map(
-                        role -> new SimpleGrantedAuthority(role)
-                ).toList();
+            .stream().map(
+                role -> new SimpleGrantedAuthority(role)
+            ).toList();
 
     }
 

@@ -30,7 +30,7 @@ public class SecurityConfig {
     private final LoginSuccessHandler loginSuccessHandler;
     private final CustomLogoutHandler customLogoutHandler;
     private final JwtFilter jwtFilter;
-    @Value("${client.url}")
+    @Value ("${client.url}")
     private String clientUrl;
 
     @Bean

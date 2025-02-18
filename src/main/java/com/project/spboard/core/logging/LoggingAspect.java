@@ -21,23 +21,35 @@ public class LoggingAspect {
     private static final String BOLD_LIGHT_BLUE = "\u001B[1;94m";
     private static final String BOLD_LIGHT_YELLOW = "\u001B[1;93m";
 
-    @Pointcut("execution(* com.project.spboard.**.controller..*(..))")
+    @Pointcut ("execution(* com.project.spboard.**.controller..*(..))")
     private void cut() {
     }
 
-    @Around("cut()")
+    @Around ("cut()")
     public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
         Method method = getMethod(joinPoint);
-        log.info(WHITE + "method name = " + BOLD_GREEN + "{}" + WHITE + "." + BOLD_LIGHT_BLUE + "{}", method.getDeclaringClass().getSimpleName(), method.getName());
+        log.info(
+            WHITE + "method name = " + BOLD_GREEN + "{}" + WHITE + "." + BOLD_LIGHT_BLUE + "{}",
+            method.getDeclaringClass().getSimpleName(),
+            method.getName()
+        );
 
         Object[] args = joinPoint.getArgs();
         if (args.length == 0) log.info("no parameter");
         for (Object arg : args) {
-            log.info(WHITE + "parameter type = " + BOLD_LIGHT_YELLOW + "{} " + WHITE + "value = " + BOLD_LIGHT_BLUE + "{}", arg.getClass().getSimpleName(), arg);
+            log.info(
+                WHITE + "parameter type = " + BOLD_LIGHT_YELLOW + "{} " + WHITE + "value = " + BOLD_LIGHT_BLUE + "{}",
+                arg.getClass().getSimpleName(),
+                arg
+            );
         }
         Object returnObj = joinPoint.proceed();
 
-        log.info(WHITE + "return type = " + BOLD_LIGHT_YELLOW + "{} " + WHITE + "value = " + BOLD_LIGHT_BLUE + "{}", returnObj.getClass().getSimpleName(), returnObj);
+        log.info(
+            WHITE + "return type = " + BOLD_LIGHT_YELLOW + "{} " + WHITE + "value = " + BOLD_LIGHT_BLUE + "{}",
+            returnObj.getClass().getSimpleName(),
+            returnObj
+        );
 
         return returnObj;
     }

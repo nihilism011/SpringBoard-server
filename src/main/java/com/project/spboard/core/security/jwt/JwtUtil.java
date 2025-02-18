@@ -18,8 +18,7 @@ import java.util.List;
 @Component
 public class JwtUtil {
 
-
-    @Value("${spring.jwt.secret}")
+    @Value ("${spring.jwt.secret}")
     private String secret;
     private SecretKey secretKey;
 
@@ -78,7 +77,6 @@ public class JwtUtil {
     public String createRefreshToken(String email, String name, List<String> roles) {
         return createToken(email, name, roles, 14 * 60 * 60);
     }
-
 
     private String createToken(String email, String name, List<String> roles, long expiredMinute) {
         LocalDateTime now = LocalDateTime.now();

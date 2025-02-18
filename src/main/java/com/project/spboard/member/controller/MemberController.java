@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
     private final MemberService memberService;
 
-    @PostMapping("/join")
+    @PostMapping ("/join")
     public ResponseEntity<ApiResponse<String>> join(@RequestBody JoinReqDto joinReqDto) {
         return memberService.saveMember(joinReqDto);
     }
 
-//    @PostMapping("/login")
-//    public ResponseEntity<ApiResponse<LoginResDto>> login(@RequestBody LoginReqDto loginReqDto){
-//        return memberService.login(loginReqDto);
-//    }
+    //    @PostMapping("/login")
+    //    public ResponseEntity<ApiResponse<LoginResDto>> login(@RequestBody LoginReqDto loginReqDto){
+    //        return memberService.login(loginReqDto);
+    //    }
 
 }

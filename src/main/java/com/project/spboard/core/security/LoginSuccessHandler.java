@@ -27,7 +27,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
     private final JwtUtil jwtUtil;
     private final RefreshService refreshService;
     private final ObjectMapper objectMapper;
-    @Value("${spring.security.cookie.secure}")
+    @Value ("${spring.security.cookie.secure}")
     private boolean isSecured;
 
     @Override

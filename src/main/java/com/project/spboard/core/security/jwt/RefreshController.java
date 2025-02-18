@@ -13,7 +13,7 @@ public class RefreshController {
 
     private final RefreshService refreshService;
 
-    @PostMapping("/refresh")
+    @PostMapping ("/refresh")
     public ResponseEntity<ApiResponse<String>> refreshToken(HttpServletRequest request) {
 
         return refreshService.validateRefreshToken(request);

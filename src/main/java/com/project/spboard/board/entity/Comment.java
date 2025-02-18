@@ -13,20 +13,20 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @Builder
-@Entity(name = "board_comment")
+@Entity (name = "board_comment")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Comment extends BaseEntity {
 
     @ManyToOne
-    @JoinColumn(name = "board_no")
+    @JoinColumn (name = "board_no")
     private Board board;
-    @Column(nullable = false)
+    @Column (nullable = false)
     private String contents;
     @ManyToOne
-    @JoinColumn(name = "author")
+    @JoinColumn (name = "author")
     private Member author;
     @ManyToOne
-    @JoinColumn(name = "parent_no")
+    @JoinColumn (name = "parent_no")
     private Comment parentNo;
 }
